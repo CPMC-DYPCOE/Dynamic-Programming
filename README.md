@@ -1,7 +1,7 @@
 
 <div align = "left">
 
-<h1 align="left"> <font size="5"> <b> DYNAMIC PROGRAMMING </b></h1>
+<h1 align="left"> <font size="5"> <b>⭐ DYNAMIC PROGRAMMING ⭐</b></h1>
 
 <p>Dynamic Programming is mainly an optimization over plain recursion. Wherever we see a recursive solution that has repeated calls for same inputs, we can optimize it using Dynamic Programming. The idea is to simply store the results of subproblems, so that we do not have to re-compute them when needed later. This simple optimization reduces time complexities from exponential to polynomial.</p>
 
@@ -54,7 +54,7 @@ cout << dp[n];
 
  ---
  
-<h2>4 things to care about in DP problems</h2>
+<h2>4 things to care about in DP problems 🚀 </h2>
 
 <h3>1. State</h3>
 <p>A subproblem that we want to solve. The subproblem may be complex or easy to solve but the final aim is to solve the final problem which may be defined by a relation between the smaller sub problems
@@ -79,7 +79,7 @@ F(3) = F(2) + F(1) = 2<br>
 F(4) = F(3) + F(2) = 3<br>
 F(5) = F(4) + F(3) = 5<br>
 </h4>
-<p>DP Solution</p>
+<p>DP Solution defining state and transition</p>
 <pre>
 int dp[n + 1]; // state
 dp[1] = 1;
@@ -96,16 +96,36 @@ cout << dp[n] << endl; // Final subproblem
 <h4>Without DP</h4>
 <pre>
 int functionEntered = 0;
+int helper(int n)
+{
+    functionEntered++;
+    if (n == 1 || n == 2)
+        return 1;
+    return helper(n - 1) + helper(n - 2);
+}
+void solve()
+{
+    int n;
+    cin >> n;
+    helper(n);
+    cout << functionEntered << endl;
+}
+</pre>
+<p>
+Here if n = 30 then <br>
+functionEntered = 1664079 <br>
+</p>
+<h4>With DP</h4>
+<pre>
+int functionEntered = 0;
 int dp[40];
 int helper(int n)
 {
     functionEntered++;
     if (n == 1 || n == 2)
         return 1;
-
     if (dp[n] != -1)
         return dp[n];
-
     return dp[n] = helper(n - 1) + helper(n - 2);
 }
 void solve()
@@ -119,7 +139,10 @@ void solve()
     helper(n);
     cout << functionEntered << endl;
 }
-
-// n = 30
-// functionEntered = 57
 </pre>
+
+<p>
+Here, if n = 30 then <br>
+functionEntered = 57
+</p>
+
