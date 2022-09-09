@@ -54,7 +54,7 @@ cout << dp[n];
 
  ---
  
-<h2>4 things to care about in DP problems 🚀 </h2>
+<h2>4 things to care about in DP problems ✨</h2>
 
 <h3>1. State</h3>
 <p>A subproblem that we want to solve. The subproblem may be complex or easy to solve but the final aim is to solve the final problem which may be defined by a relation between the smaller sub problems
@@ -71,7 +71,7 @@ cout << dp[n];
 
 ---
 
-<h2>Fibonacci Number</h2>
+<h2>Fibonacci Number </h2>
 <h4>Find the Nth Fibonacci Number where F(n) = F(n-1) + F(n-2)<br>
 F(1) = 1<br>
 F(2) = 1<br>
@@ -91,7 +91,7 @@ for (int i = 3; i <= n; i++)
 cout << dp[n] << endl; // Final subproblem
 </pre>
 
-<h2>Comparing with and without DP solutions</h2>
+<h2>Comparing with and without DP solutions </h2>
 
 <h4>Without DP</h4>
 <pre>
